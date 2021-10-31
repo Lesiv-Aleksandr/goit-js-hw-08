@@ -1,6 +1,9 @@
 // Add imports above this line
-import { galleryItems } from './gallery-items.js';
 import SimpleLightbox from "simplelightbox";
+import { galleryItems } from './gallery-items.js';
+import 'simplelightbox/dist/simple-lightbox.min.css';
+
+
 // Change code below this line
 const galleryRef = document.querySelector('.gallery');
 
@@ -13,7 +16,8 @@ const makegalleryItemsMarkur = galleryItems.map(galleryItem => {
    
 }).join("");
 galleryRef.addEventListener("click", onClick);
-const lightbox = new SimpleLightbox('.gallery a', { captionsData: "alt", captionDelay: 250} );
+
+const lightbox = new SimpleLightbox('.gallery a', {captionsData: "alt", captionDelay: 250} );
 function onClick (e) { 
    e.preventDefault();
 
